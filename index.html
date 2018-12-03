@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>StefWorks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+
+
+  html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+
+  /* footer styling, sticky to the bottom, a few pixels above */
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 10px; /* from the bottom of the browser */
+    width: 100%;
+    color: black;
+    text-align: center;
+  }
+
+  /*  styling of the slider */
+  .slidecontainer {
+    width: 100%;
+  }
+
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+
+  .slider:hover {
+    opacity: 1;
+  }
+
+  /* Custom images for each slider icon */
+  #myRange1::-webkit-slider-thumb{
+    background: url('homepage/pin.svg'); /* ref here is enough for chrome support */
+  }
+
+  #myRange2::-webkit-slider-thumb{
+    background: url('homepage/icebergHat.svg'); /* ref here is enough for chrome support */
+  }
+ 
+  #myRange3::-webkit-slider-thumb{
+    width: 40px;
+    height: 42px;
+    background: url('homepage/badge.svg'); /* ref here is enough for chrome support */
+  }
+
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    /* background: url('untitled.svg'); /* ref here is enough for chrome support */
+    cursor: pointer;
+  }
+
+  .slider::-moz-range-thumb {
+    width: 23px;
+    height: 29px;
+    border: 0;
+    background: url('selfSliderIcon.png'); /* todo: fix this with some relevant icon */
+    cursor: pointer;
+  }
+
+.color-primary-0 { color: #DCCE2F }	/* Main Primary color */
+.color-primary-1 { color: #FFF583 }
+.color-primary-2 { color: #F0E456 }
+.color-primary-3 { color: #B5A815 }
+.color-primary-4 { color: #8F8301 }
+
+.color-secondary-1-0 { color: #C72A54 }	/* Main Secondary color (1) */
+.color-secondary-1-1 { color: #EC7998 }
+.color-secondary-1-2 { color: #D94E73 }
+.color-secondary-1-3 { color: #A4133A }
+.color-secondary-1-4 { color: #810023 }
+
+.color-secondary-2-0 { color: #265D8E }	/* Main Secondary color (2) */
+.color-secondary-2-1 { color: #648FB6 }
+.color-secondary-2-2 { color: #3F6F9B }
+.color-secondary-2-3 { color: #154775 }
+.color-secondary-2-4 { color: #07345C }
+
+.color-complement-0 { color: #5A2995 }	/* Main Complement color */
+.color-complement-1 { color: #8F68BC }
+.color-complement-2 { color: #6E43A2 }
+.color-complement-3 { color: #44177B }
+.color-complement-4 { color: #300861 }
+body,h1 {font-family: "Raleway", sans-serif}
+    body, html {height: 100%}
+    .bgimg {
+        background-image: url('https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_1920,f_auto/A-dreamstime_1601578_t5w61h.jpg');
+        min-height: 100%;
+        background-position: center;
+        background-size: cover;
+    }
+</style>
+</head>
+
+<body>
+  <!-- Intro Page -->
+    
+    <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+      <div class="w3-display-topleft w3-padding-large w3-xlarge">
+        STEFWORKS
+      </div>
+      <div class="w3-display-middle">
+        <h1 class="w3-jumbo w3-animate-top">PORTFOLIO</h1>
+        <hr class="w3-border-grey" style="margin:auto;width:40%">
+        <p class="w3-large w3-center">Use the sliders, follow the color code, explore the profile</p>
+      </div>
+      <div class="w3-display-bottomleft w3-padding-large">
+        Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+      </div>
+    </div>
+
+
+
+  <!-- CONTENT  -->
+
+  <div id="content">
+    <!-- SECTION1 -->
+    <div class="w3-container w3-red w3-cell-middle w3-cell w3-mobile">
+
+      <div class="w3-container w3-red Section1 w3-padding-16" style="display: 'none'">
+        <div class="w3-card-4" style="overflow:hidden">
+          <img src="homepage/kid.jpg" class="w3-round" style="max-width:100%" alt="">
+        </div>
+      </div>
+
+      <div class="w3-container w3-red Section1 w3-margin" style="display: 'none'">
+        <div class="w3-card-4" style="overflow:hidden">
+          <img src="homepage/volunteerPride.jpg" class="w3-round" style="max-width:100%" alt="">
+        </div>
+      </div>
+
+      <div class="w3-container w3-red Section1 w3-padding-16" style="display: 'none'">
+        <div class="w3-card-4" style="overflow:hidden">
+          <img src="homepage/book.jpg" class="w3-round" style="max-width:100%" alt="">
+        </div>
+      </div>
+
+      <div class="w3-container w3-red Section1 w3-margin" style="display: 'none'">
+        <div class="w3-card-4" style="overflow:hidden">
+          <img src="homepage/instaFamily.png" class="w3-round" style="max-width:100%" alt="">
+        </div>
+      </div>
+
+      <div class="w3-container w3-red Section1 w3-margin" style="display: 'none'">
+        <div class="w3-card-4" style="overflow:hidden">
+          <img src="homepage/linkedInQR.jpg" class="w3-round" style="max-width:100%" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- SECTION2  -->
+
+    <div class="w3-container w3-green w3-cell w3-mobile" style="width:60%">
+
+      <div class="w3-container w3-green Section2">
+        <div class=" w3-card w3-white w3-round w3-margin-bottom " style="display: 'none'">
+          <h2 class="w3-text-grey w3-margin w3-padding-16"> <img src="homepage/icebergHat.svg" alt=""> Volunteer Work,
+            Athens GR</h2>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Member of the Organizing Committee / <a href="https://www.athenspride.eu" target="_blank">Athens
+                  Pride</a> </b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2009 - 2012</h6>
+            <p>
+              ▪ Coordination of a large scale event (6,000 – 10,000 participants) <br>
+              ▪ Logistics handling <br>
+              ▪ Volunteers recruiting, training and coordination</p>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Founding Member / <a href="https://www.colouryouth.gr" target="_blank">Colour
+                  Youth,
+                  LGBTQ Youth Community</a> </b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i> 2010 - 2012</h6>
+            <p>▪ Secretary in the BoD <br>
+              ▪ Strategic planning of the organization’s operations <br>
+              ▪ Volunteers recruiting, training and coordination</p>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Merchandising and Clothes Shop / Hellenic Red Cross </b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2009 - 2011</h6>
+            <p>▪ Shop manager <br>
+              ▪ Market Research <br>
+              ▪ Sales
+            </p><br>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-container w3-green Section2">
+        <div class=" w3-card w3-white w3-round w3-margin-bottom " style="display: 'none'">
+          <h2 class="w3-text-grey w3-margin  w3-padding-16"> <img src="homepage/icebergHat.svg" alt=""> Retail
+            Experience,
+            Madrid ES</h2>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Fashion Advisor / <a href="https://www.uterque.com/dk/" target="_blank">“Uterqüe”
+                  Flagship Store (Inditex)</a></b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Nov 2015 - Jun 2016</h6>
+            <p>▪ Exclusive fashion advising to premium (high value) customers <br>
+              ▪ Zoning & Visual Merchandising <br>
+              ▪ Sales maximization according to pre-specified KPIs</p>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Sales Manager & Shift Manager / <a href="https://www.facebook.com/BovinusLuxury/"
+                  target="_blank">Bovinus Luxury</a></b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sep 2014 - Sep 2015</h6>
+            <p>▪ Management of the day-to-day operation of a premium food market stall <br>
+              ▪ Service quality management and assurance <br>
+              ▪ Selection and training of employees</p>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Su Chef, Sales / <a href="http://www.mercadodesanfernando.es/exargia/" target="_blank">Exargia</a></b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2012 - Jul 2014</h6>
+            <p>▪ Preparation of traditional greek dishes <br>
+              ▪ Merchandising and customer service</p><br>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-container w3-green Section2">
+        <div class=" w3-card w3-white w3-round w3-margin-bottom " style="display: 'none'">
+          <h2 class="w3-text-grey w3-margin  w3-padding-16"> <img src="homepage/icebergHat.svg" alt=""> Student Jobs,
+            København
+            DK</h2>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Bartender / <a href="https://www.cosybar.dk/" target="_blank">Cosy Bar</a></b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sep 2017 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
+            <p>Old gaybar in downtown Copenhagen, cosy atmosphere. I work long night shifts every other weekend, so I
+              get
+              more time to concentrate on my studies.
+              <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Head Waiter / <a href="http://asador.dk/" target="_blank">Asador</a></b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2016 - Sep 2017</h6>
+            <p> Argentenian Stakehouse in Cristianshavn borrow, good meat and whine. I still have excellent
+              relationship
+              with the owners, and work extra shifts when needed.</p><br>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-container w3-green Section2">
+        <div class=" w3-card w3-white w3-round w3-margin-bottom " style="display: 'none'">
+          <h2 class="w3-text-grey w3-margin  w3-padding-16"> <img src="homepage/icebergHat.svg" alt=""> Internship,
+            ProjectLab KEA
+            DK</h2>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>AR Module / <a href="http://www.koebenhavnerture.dk/" target="_blank">
+                  Københavner Ture</a></b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i> Oct 2018 - Nov 2018</h6>
+            <p>In a multidisciplinary team of 2 software developers and 2 multimedia designers, we developed an AR
+              solution for this local guided-tours company.
+              Our goal is to "Bring Stories Alive" as well as to add a competitive advantage in the company's SoMe
+              presence. Received good feedback.
+              <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>VR Module / <a href="http://www.chase-race.com/" target="_blank">Chase-Race</a></b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2018 - Oct 2018</h6>
+            <p> Working with various product development tecniques, we designed and developed a VR experience for
+              marketing purposes.
+              We went also through an intensive 3-day course on Unity 3D.</p><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION3  -->
+  <div class="w3-cell-row w3-blue">
+
+
+    <div class="w3-container w3-card w3-white w3-round w3-margin Section3" style="display: 'none'"><br>
+      <img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png" alt="Avatar" class="w3-left w3-circle w3-margin-right"
+        style="width:60px">
+      <span class="w3-right w3-opacity">May 2018</span>
+      <h4>Simple Chat</h4><br>
+      <hr class="w3-clear">
+      <p>NODEjs app, JWT based authentication, websockets, SQL persistence, DOCKER compose containerization.
+      </p>
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half">
+          <img src="homepage/node.png" style="width:100%" alt="screenshot" class="w3-margin-bottom">
+        </div>
+        <div class="w3-half">
+          <a frameborder="0" data-theme="light" data-layers="1,2,3,4" data-stack-embed="true" href="https://embed.stackshare.io/stacks/embed/5397ffa85183437477a2518fbcfb74" /></a>
+          <script async src="https://cdn1.stackshare.io/javascripts/client-code.js" charset="utf-8"></script>
+          <!-- <img src="/w3images/nature.jpg" style="width:100%" alt="Nature" class="w3-margin-bottom"> -->
+        </div>
+      </div>
+      <button type="button" onclick="window.open('https://github.com/stefanosAgelastos/chatNodejs')"" class=" w3-button
+        w3-theme-d1 w3-margin-bottom"><i class="fa fa-github"></i> &nbsp;Github</button>
+      <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-terminal"></i> <del>
+          &nbsp;Demo </del></button>
+    </div>
+
+    <div class="w3-container w3-card w3-white w3-round w3-margin Section3" style="display: 'none'"><br>
+      <img src="https://spring.io/img/homepage/icon-spring-cloud.svg" alt="Avatar" class="w3-left w3-circle w3-margin-right"
+        style="width:60px">
+      <span class="w3-right w3-opacity">Jun 2018</span>
+      <h4>REST resources for Single Page Application</h4><br>
+      <hr class="w3-clear">
+      <p>Spring Boot back-end, REST resources. JWT based authentication, SWAGGER, H2 embedded
+        database. Continuous Intergration with Jenkins github webhooks.
+      </p>
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half">
+          <img src="homepage/spring-rest.png" style="width:100%" alt="screenshot" class="w3-margin-bottom">
+        </div>
+        <div class="w3-half">
+          <a frameborder="0" data-theme="light" data-layers="1,2,3,4" data-stack-embed="true" href="https://embed.stackshare.io/stacks/embed/f9e6c770c69d5b0bffd513ca7c995b" /></a>
+          <script async src="https://cdn1.stackshare.io/javascripts/client-code.js" charset="utf-8"></script>
+        </div>
+      </div>
+      <button type="button" onclick="window.open('https://github.com/stefanosAgelastos/personalRest')"" class="
+        w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-github"></i> &nbsp;Github</button>
+      <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-terminal"></i> <del>
+          &nbsp;Demo </del></button>
+    </div>
+
+    <div class="w3-container w3-card w3-white w3-round w3-margin Section3" style="display: 'none'"><br>
+      <img src="https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg" alt="Avatar" class="w3-left w3-circle w3-margin-right"
+        style="width:60px">
+      <span class="w3-right w3-opacity">Jun 2018</span>
+      <h4>Administration SPA</h4><br>
+      <hr class="w3-clear">
+      <p>Angular5 front. JWT based authentication, reactive forms, redux.
+        Served from a Spring Boot app. Continuous Intergration with Jenkins github webhooks.
+      </p>
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half">
+          <img src="homepage/cvEditor.png" style="width:100%" alt="screenshot" class="w3-margin-bottom">
+        </div>
+        <div class="w3-half">
+          <a frameborder="0" data-theme="light" data-layers="1,2,3,4" data-stack-embed="true" href="https://embed.stackshare.io/stacks/embed/8ad84b5f98988d769fc3c329cfe99b" /></a>
+          <script async src="https://cdn1.stackshare.io/javascripts/client-code.js" charset="utf-8"></script>
+          <!-- <img src="/w3images/nature.jpg" style="width:100%" alt="Nature" class="w3-margin-bottom"> -->
+        </div>
+      </div>
+      <button type="button" onclick="window.open('https://github.com/stefanosAgelastos/cvEditorFront')" class="w3-button w3-theme-d1 w3-margin-bottom"><i
+          class="fa fa-github"></i> &nbsp;Github</button>
+      <button type="button" onclick="window.open('http://www.stefworks.ml/angular/index.html')" class="w3-button w3-theme-d2 w3-margin-bottom"><i
+          class="fa fa-terminal"></i> &nbsp;Demo</button>
+    </div>
+
+  </div>
+
+
+
+  <!-- END OF CONTENT AREA -->
+  </div>
+
+
+  <!-- Here starts the floating footer div with the accordion buttons,
+  it should float a few pixels over the bottom of the browser -->
+  <div class="footer">
+
+    <!-- FIRST ACCORDEON button, open/close the #Demo1 div todo: button remains gray after clicking on mobile devices-->
+    <div onclick="myAccordeon('Demo1')" class="w3-btn w3-red w3-block w3-left-align ">My life so far.. in
+      selfies!</div>
+    <!--FIRST SLIDER, controls the content of the Section1 above -->
+    <div id="Demo1" class="slidecontainer w3-container w3-hide w3-grey w3-padding-16">
+      <input type="range" min="0" max="100" step="1" class="slider" id="myRange1" oninput="mySlider('Section1')">
+    </div>
+
+    <!-- SECOND ACCORDEON button, open/close the #Demo2 div todo: button remains gray after clicking on mobile devices -->
+    <div onclick="myAccordeon('Demo2')" class="w3-btn w3-green w3-block w3-left-align ">My work &
+      volunteer experience</div>
+    <!--SECOND SLIDER, controls the content of the Section2 above -->
+    <div id="Demo2" class="slidecontainer w3-container w3-hide w3-grey w3-padding-16">
+      <input type="range" min="0" max="100" step="1" class="slider" id="myRange2" oninput="mySlider('Section2')">
+    </div>
+
+    <!-- THIRD ACCORDEON button, open/close the #Demo3 div todo: button remains gray after clicking on mobile devices -->
+    <div onclick="myAccordeon('Demo3')" class="w3-btn w3-blue w3-block w3-left-align ">My studies,
+      project stacks &
+      demos</div>
+    <!--THIRD SLIDER, controls the content of the Section3 above -->
+    <div id="Demo3" class="slidecontainer w3-container w3-hide w3-grey w3-padding-16">
+      <input type="range" min="0" max="100" step="1" class="slider" id="myRange3" oninput="mySlider('Section3')">
+    </div>
+  </div>
+
+  <!-- BUFFER FOR BEHIND THE CONTROLS -->
+  <div class="w3-block" style="height:123px"></div>
+
+
+</body>
+<script>
+  /* Run this at load of page */
+  console.log("Starting the scripts");
+  /* EDIT: set initial Section indexes */
+  var initialSectionPosition = [2, 2, 1];
+  /* Set the max value of the sliders  */
+  var sliders = document.getElementsByClassName("slider");
+  var i;
+  for (i = 0; i < sliders.length; i++) {
+    /* finds how many SectionX elements exist */
+    let sectionClass = "Section" + (i + 1);
+    sliders[i].max = (document.getElementsByClassName(sectionClass).length - 1);  /* -1 so that that the slider starts from 0 */
+    sliders[i].value = initialSectionPosition[i]; /* position the slider at initial value */
+    console.log("Set max for " + sectionClass + " as " + sliders[i].max);
+    carousel(sectionClass, initialSectionPosition[i]); /* display initial content */
+  };
+
+  /* script for the accordion buttons */
+  function myAccordeon(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+      /*  x.previousElementSibling.className =
+         x.previousElementSibling.className.replace("w3-opacity-min", " w3-opacity"); */
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+      /* x.previousElementSibling.className =
+        x.previousElementSibling.className.replace("w3-opacity", "w3-opacity-min"); */
+    }
+  }
+
+  /* Script for the slider, receives the section class to slide through */
+  function mySlider(sectionClass) {
+    var slider = event.srcElement;
+    carousel(sectionClass, slider.value);
+    /* var output = document.getElementById(sectionId);
+    output.innerHTML = slider.value; */
+  }
+
+  function carousel(sectionClass, sliderValue) {
+    var i;
+    var x = document.getElementsByClassName(sectionClass);
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    if (sliderValue > x.length) { sliderValue = 1 }
+    x[sliderValue].style.display = "block";
+    /* setTimeout(carousel, 2000);  */ // for automatic rotation
+  }
+
+</script>
+
+</html>
