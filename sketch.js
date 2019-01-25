@@ -21,8 +21,9 @@ function setup() {
   var projects = createP("My projects");
   projects.position(width / 4, height / 2 - 25 + waveWidth/4).style('color', colors[0]).mousePressed(() =>{
     select("#Demo3").position(0,windowHeight-100).show();
-    select("#Content3").position(windowWidth/2-select("#Content3").size().width/2,0);
+    select("#Content3").position(windowWidth/2-select("#Content3").size().width/2,0).style("z-index","10");
     select(".Section3").show();
+    colors.shift();
   });
   var selfies = createP("My life in selfies");
   selfies.position(width / 4, height / 2 - 25 + 2*waveWidth/4).style('color', colors[1]);
