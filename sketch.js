@@ -11,7 +11,7 @@ var options = [];
 var shortText;
 var longText;
 var type;
-var waveWidth = 100;
+var waveWidth = 120;
 var XMainMenu;
 var waveCenter;
 var mainMenuYPositions;
@@ -26,10 +26,10 @@ function setup() {
   ];
 
   shortText = [
-    'SWS',
-    'Prjt',
-    'Pics',
-    'Expr'
+    'SW',
+    'Prj',
+    'Pic',
+    'Exp'
   ];
 
   longText = [
@@ -41,18 +41,18 @@ function setup() {
 
   colors = colorPalete.slice(0);
 
-  waveCenter = windowHeight / 2 - 39;
+  waveCenter = windowHeight / 2 - 28;
 
   XMainMenu = windowWidth / 20;
 
   mainMenuYPositions = [
-    waveCenter - waveWidth - 3 * waveWidth / 4,
-    waveCenter - waveWidth - 2 * waveWidth / 4,
-    waveCenter - waveWidth - waveWidth / 4,
+    waveCenter - waveWidth - 3 * waveWidth / 2,
+    waveCenter - waveWidth - 2 * waveWidth / 2,
+    waveCenter - waveWidth - waveWidth / 2,
     waveCenter,
-    waveCenter + waveWidth + waveWidth / 4,
-    waveCenter + waveWidth + 2 * waveWidth / 4,
-    waveCenter + waveWidth + 3 * waveWidth / 4
+    waveCenter + waveWidth + waveWidth / 2,
+    waveCenter + waveWidth + 2 * waveWidth / 2,
+    waveCenter + waveWidth + 3 * waveWidth / 2
   ];
 
   /* -------- */
@@ -61,19 +61,19 @@ function setup() {
   /* -------- */
 
   /* --- CREATE MAIN MENU OPTIONS AND SET INITIAL POSITIONS --- */
-  var _rootMenu = createP(longText[0]);
+  var _rootMenu = createButton(longText[0]).addClass("w3-button").addClass("w3-round-xxlarge").addClass("w3-black").addClass("w3-hover-black");
   _rootMenu.position(XMainMenu, mainMenuYPositions[3]).style('font-size', '20px');
   options.push(_rootMenu);
 
-  var _projects = createP(longText[1]);
+  var _projects = createButton(longText[1]).addClass("w3-button").addClass("w3-round-xxlarge").addClass("w3-red").addClass("w3-hover-red");
   _projects.position(XMainMenu, mainMenuYPositions[4]).style('color', colors[0]).style('font-size', '20px');
   options.push(_projects);
 
-  var _selfies = createP(longText[2]);
+  var _selfies = createButton(longText[2]).addClass("w3-button").addClass("w3-round-xxlarge").addClass("w3-light-green").addClass("w3-hover-light-green");
   _selfies.position(XMainMenu, mainMenuYPositions[5]).style('color', colors[1]).style('font-size', '20px');
   options.push(_selfies);
 
-  var _experience = createP(longText[3]);
+  var _experience = createButton(longText[3]).addClass("w3-button").addClass("w3-round-xxlarge").addClass("w3-blue").addClass("w3-hover-blue");
   _experience.position(XMainMenu, mainMenuYPositions[6]).style('color', colors[2]).style('font-size', '20px');
   options.push(_experience);
 
@@ -85,7 +85,7 @@ function setup() {
 
   /* --- SETUP ONCLICK METHODS */
 
-  _rootMenu.mousePressed(() => { 
+  _rootMenu.mousePressed(() => {
     mainMenuSelect(_rootMenu);
     hideAllContent();
   });
@@ -109,15 +109,15 @@ function setup() {
 
 function hideAllContent() {
   var i;
-  for(i=2; i<4; i++){
-    select("#Section" + i).position(options[0].size().width, 0).style("z-index", "10").hide().size(windowWidth - options[0].size().width - 20, windowHeight - 20);
+  for (i = 2; i < 4; i++) {
+    select("#Section" + i).hide();
     select(".Content" + i).hide();
-    select("#Demo" + i).position(0, windowHeight - 100).hide();
+    select("#Demo" + i).hide();
   }
 }
 
 function showContent(htmlSectNumber) {
-  select("#Section" + htmlSectNumber).position(options[0].size().width, 0).style("z-index", "10").show().size(windowWidth - options[0].size().width - 20, windowHeight - 20);
+  select("#Section" + htmlSectNumber).position(options[0].size().width + 7, 0).style("z-index", "10").show().size(windowWidth - options[0].size().width - 20, windowHeight);
   select(".Content" + htmlSectNumber).show();
   select("#Demo" + htmlSectNumber).position(0, windowHeight - 100).show();
 }
@@ -147,6 +147,7 @@ function mainMenuSelect(selected) {
 }
 
 
+
 function draw() {
   blendMode(BLEND);
 
@@ -166,12 +167,22 @@ function draw() {
     for (var w = -20; w < width + 20; w += 5) {
       var h = height / 2;
       var factor = frameCount;
-      h += waveWidth * sin(w * 0.03 + factor * 0.07 + i * TWO_PI / 3) * pow(abs(sin(w * 0.00 + factor * 0.015)), 5);
+      h += waveWidth * sin(w * 0.03 + factor * 0.07 + i * TWO_PI / 3) * pow(abs(sin(w * 0.001 + factor * 0.015)), 5);
       curveVertex(w, h);
     }
     endShape();
   });
   /* -- TRANSLATE OPTIONS TO RIGHT POSITION */
+  /* for (var i = 0; i < 3; i++) {
+    stroke(colors[i]);
+    beginShape();
+    for (var w = -20; w < width + 20; w += 5) {
+      var h = height / 2;
+      h += waveWidth * sin(w * 0.03 + frameCount * 0.07 + i * TWO_PI / 3) * pow(abs(sin(w * 0.001 + frameCount * 0.02)), 5);
+      curveVertex(w, h);
+    }
+    endShape();
+  } */
 
 
 }
