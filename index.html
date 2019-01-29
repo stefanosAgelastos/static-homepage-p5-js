@@ -19,55 +19,7 @@
   .slidecontainer {
     width: 100%;
   }
-  .slider {
-    -webkit-appearance: none;
-    width: 100%;
-    height: 10px;
-    border-radius: 5px;
-    background: #d3d3d3fd;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-  }
 
-  .slider:hover {
-    opacity: 1;
-  }
-
-  /* Custom images for each slider icon */
-  #myRange1::-webkit-slider-thumb{
-    background: url('homepage/pin.svg'); /* ref here is enough for chrome support */
-  }
-
-  #myRange2::-webkit-slider-thumb{
-    background: url('homepage/icebergHat.svg'); /* ref here is enough for chrome support */
-  }
- 
-  #myRange3::-webkit-slider-thumb{
-    width: 40px;
-    height: 42px;
-    background: url('homepage/badge.svg'); /* ref here is enough for chrome support */
-  }
-
-
-  .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 40px;
-    height: 40px;
-    border: 0;
-    /* background: url('untitled.svg'); /* ref here is enough for chrome support */
-    cursor: pointer;
-  }
-
-  .slider::-moz-range-thumb {
-    width: 23px;
-    height: 29px;
-    border: 0;
-    background: url('selfSliderIcon.png'); /* todo: fix this with some relevant icon */
-    cursor: pointer;
-  }
 
   .video-container {
 position: relative;
@@ -153,10 +105,11 @@ height: 100%;
   </div>
 
   <!-- SECTION2  -->
-  <div>
+  <div class="w3-content">
+    <div id="Section2" class="w3-card w3-white w3-round " style="display: none">
 
-    <div class="w3-container w3-green Section2">
-      <div class=" w3-card w3-white w3-round w3-margin-bottom " style="display: none">
+
+      <div class="Content2" style="display: none">
         <h2 class="w3-text-grey w3-margin w3-padding-16">Volunteer Work,
           Athens GR</h2>
         <div class="w3-container">
@@ -177,21 +130,11 @@ height: 100%;
           <p>▪ Secretary in the BoD <br>
             ▪ Strategic planning of the organization’s operations <br>
             ▪ Volunteers recruiting, training and coordination</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Merchandising and Clothes Shop / Hellenic Red Cross </b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2009 - 2011</h6>
-          <p>▪ Shop manager <br>
-            ▪ Market Research <br>
-            ▪ Sales
-          </p><br>
         </div>
       </div>
-    </div>
 
-    <div class="w3-container w3-green Section2">
-      <div class=" w3-card w3-white w3-round w3-margin-bottom " style="display: none">
+
+      <div class="Content2" style="display: none">
         <h2 class="w3-text-grey w3-margin  w3-padding-16">Retail
           Experience,
           Madrid ES</h2>
@@ -211,19 +154,11 @@ height: 100%;
           <p>▪ Management of the day-to-day operation of a premium food market stall <br>
             ▪ Service quality management and assurance <br>
             ▪ Selection and training of employees</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Su Chef, Sales / <a href="http://www.mercadodesanfernando.es/exargia/" target="_blank">Exargia</a></b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2012 - Jul 2014</h6>
-          <p>▪ Preparation of traditional greek dishes <br>
-            ▪ Merchandising and customer service</p><br>
         </div>
       </div>
-    </div>
 
-    <div class="w3-container w3-green Section2">
-      <div class=" w3-card w3-white w3-round w3-margin-bottom " style="display: none">
+
+      <div class="Content2" style="display: none">
         <h2 class="w3-text-grey w3-margin  w3-padding-16">Student Jobs,
           København
           DK</h2>
@@ -243,10 +178,9 @@ height: 100%;
             with the owners, and work extra shifts when needed.</p><br>
         </div>
       </div>
-    </div>
 
-    <div class="w3-container w3-green Section2">
-      <div class=" w3-card w3-white w3-round w3-margin-bottom " style="display: none">
+
+      <div class="Content2" style="display: none">
         <h2 class="w3-text-grey w3-margin  w3-padding-16">Internship,
           ProjectLab KEA
           DK</h2>
@@ -258,9 +192,6 @@ height: 100%;
             solution for this local guided-tours company.
             Our goal is to "Bring Stories Alive" as well as to add a competitive advantage in the company's SoMe
             presence. Received good feedback.
-            <div class="video-container"><iframe width="853" height="480" src="https://www.youtube.com/embed/Lbq94Ef9qJY?start=3"
-                frameborder="0" allowfullscreen></iframe></div>
-
             <hr>
         </div>
         <div class="w3-container">
@@ -271,133 +202,140 @@ height: 100%;
             We went also through an intensive 3-day course on Unity 3D.</p><br>
         </div>
       </div>
-    </div>
-    <!--SECOND SLIDER, controls the content of the Section2 above -->
-    <div id="Demo2" class="slidecontainer w3-container w3-padding-16" style="display: none">
-      <input type="range" min="0" max="100" step="1" class="slider" id="myRange2" oninput="mySlider('Section2')">
+
+      <!--SECOND SLIDER, controls the content of the Section2 above -->
+      <div id="Demo2" class="slidecontainer w3-container w3-padding-16">
+        <div class="w3-center">
+          <div class="w3-bar">
+            <a href="#" class="w3-bar-item w3-button">&laquo;</a>
+            <a href="#" class="w3-button pContent2 w3-blue" onclick="pagination('Content2',1,'w3-blue')">1</a>
+            <a href="#" class="w3-button pContent2" onclick="pagination('Content2',2,'w3-blue')">2</a>
+            <a href="#" class="w3-button pContent2" onclick="pagination('Content2',3,'w3-blue')">3</a>
+            <a href="#" class="w3-button pContent2" onclick="pagination('Content2',4,'w3-blue')">4</a>
+            <a href="#" class="w3-button">&raquo;</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
   <!-- SECTION3  -->
-  <div class="w3-content" id="Content3">
+  <div class="w3-content">
 
-    <div class="w3-container w3-card w3-white w3-round w3-margin Section3" style="display: none"><br>
-      <img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png" alt="Avatar" class="w3-left w3-circle w3-margin-right"
-        style="width:60px">
-      <span class="w3-right w3-opacity">May 2018</span>
-      <h4>Simple Chat</h4><br>
-      <hr class="w3-clear">
-      <p>NODEjs app, JWT based authentication, websockets, SQL persistence, DOCKER compose containerization.
-      </p>
-      <iframe src="http://chat.stefworks.ml/" style="border:none; width:100%; height:300px;"></iframe>
-      <button type="button" onclick="window.open('https://github.com/stefanosAgelastos/chatNodejs')"" class=" w3-button
-        w3-theme-d1 w3-margin-bottom"><i class="fa fa-github"></i> &nbsp;Github</button>
-      <button type="button" onclick="window.open('https://chat.stefworks.ml/')" class="w3-button w3-theme-d2 w3-margin-bottom"><i
-          class="fa fa-terminal"></i>
-        &nbsp;Demo </button>
-    </div>
+    <div id="Section3" class="w3-container w3-card w3-white w3-round " style="display: none">
+      <br>
 
-    <div class="w3-container w3-card w3-white w3-round w3-margin Section3" style="display: none"><br>
-      <img src="https://spring.io/img/homepage/icon-spring-cloud.svg" alt="Avatar" class="w3-left w3-circle w3-margin-right"
-        style="width:60px">
-      <span class="w3-right w3-opacity">Jun 2018</span>
-      <h4>REST resources for Single Page Application</h4><br>
-      <hr class="w3-clear">
-      <p>Spring Boot back-end, REST resources. JWT based authentication, SWAGGER, H2 embedded
-        database. Continuous Intergration with Jenkins github webhooks.
-      </p>
+      <div class="Content3" style="display: none">
+        <img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png" alt="Avatar" class="w3-left w3-margin-right"
+          style="width:60px">
+        <span class="w3-right w3-opacity">May 2018</span>
+        <h4>Simple Chat</h4><br>
 
-      <button type="button" onclick="window.open('https://github.com/stefanosAgelastos/personalRest')"" class="
-        w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-github"></i> &nbsp;Github</button>
-      <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-terminal"></i> <del>
-          &nbsp;Demo </del></button>
-    </div>
+        <hr class="w3-clear">
+        <p>NODEjs app, JWT based authentication, websockets, SQL persistence, DOCKER compose containerization.
+        </p>
+        <iframe src="http://chat.stefworks.ml/" style="border:none; width:100%; height:300px;"></iframe>
+        <button type="button" onclick="window.open('https://github.com/stefanosAgelastos/chatNodejs')"" class="
+          w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-github"></i> &nbsp;Github</button>
+      </div>
 
-    <div class="w3-container w3-card w3-white w3-round w3-margin Section3" style="display: none"><br>
-      <img src="https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg" alt="Avatar" class="w3-left w3-circle w3-margin-right"
-        style="width:60px">
-      <span class="w3-right w3-opacity">Jun 2018</span>
-      <h4>Administration SPA</h4><br>
-      <hr class="w3-clear">
-      <p>Angular5 front. JWT based authentication, reactive forms, redux.
-        Served from a Spring Boot app. Continuous Intergration with Jenkins github webhooks.
-      </p>
-      <iframe src="http://makeyourcv.stefworks.ml/" style="border:none; width:100%; height:300px;"></iframe>
+      <div class="Content3" style="display: none">
+        <img src="https://spring.io/img/homepage/icon-spring-cloud.svg" alt="Avatar" class="w3-left w3-margin-right"
+          style="width:60px">
+        <span class="w3-right w3-opacity">Jun 2018</span>
+        <h4>REST resources for Single Page Application</h4><br>
+        <hr class="w3-clear">
+        <p>Spring Boot back-end, REST resources. JWT based authentication, SWAGGER, H2 embedded
+          database. Continuous Intergration with Jenkins github webhooks.
+        </p>
 
-      <button type="button" onclick="window.open('https://github.com/stefanosAgelastos/cvEditorFront')" class="w3-button w3-theme-d1 w3-margin-bottom"><i
-          class="fa fa-github"></i> &nbsp;Github</button>
-      <button type="button" onclick="window.open('http://makeyourcv.stefworks.ml/')" class="w3-button w3-theme-d2 w3-margin-bottom"><i
-          class="fa fa-terminal"></i> &nbsp;Demo</button>
-    </div>
+        <button type="button" onclick="window.open('https://github.com/stefanosAgelastos/personalRest')"" class="
+          w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-github"></i> &nbsp;Github</button>
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-terminal"></i> <del>
+            &nbsp;Demo </del></button>
+      </div>
 
-    <div class="w3-container w3-card w3-white w3-round w3-margin Section3" style="display: none"><br>
-      <img src="https://4.bp.blogspot.com/-qgCd0X6Q5jo/WS7l8KhIztI/AAAAAAAABHk/w6t5pFbWdeUUjVoPFTjkvpraw3PDPtijwCLcB/s1600/Unity_Logo.png"
-        alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
-      <span class="w3-right w3-opacity">Jun 2018</span>
-      <h4>Final Project</h4><br>
-      <hr class="w3-clear">
-      <p>Together with two colleagues we developed our final project at KEA.
-        We combined Scrum and Design thinking for our process and developed an augmented reality android APK and a
-        React admin page.
-        Click the demo below to browse the admin page.
-      </p>
-      <iframe src="http://ar.stefworks.ml/" style="border:none; width:100%; height:300px;"></iframe>
+      <div class="Content3" style="display: none">
+        <img src="https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg" alt="Avatar" class="w3-left w3-margin-right"
+          style="width:60px">
+        <span class="w3-right w3-opacity">Jun 2018</span>
+        <h4>Administration SPA</h4><br>
+        <hr class="w3-clear">
+        <p>Angular5 front. JWT based authentication, reactive forms, redux.
+          Served from a Spring Boot app. Continuous Intergration with Jenkins github webhooks.
+        </p>
+        <iframe src="http://makeyourcv.stefworks.ml/" style="border:none; width:100%; height:300px;"></iframe>
 
-      <button type="button" onclick="window.open('https://github.com/stefanosAgelastos/gps-tourist-app')" class="w3-button w3-theme-d1 w3-margin-bottom"><i
-          class="fa fa-github"></i> &nbsp;Github</button>
-      <button type="button" onclick="window.open('http://ar.stefworks.ml/')" class="w3-button w3-theme-d2 w3-margin-bottom"><i
-          class="fa fa-terminal"></i> &nbsp;Demo</button>
-    </div>
+        <button type="button" onclick="window.open('https://github.com/stefanosAgelastos/cvEditorFront')" class="w3-button w3-theme-d1 w3-margin-bottom"><i
+            class="fa fa-github"></i> &nbsp;Github</button>
+        <button type="button" onclick="window.open('http://makeyourcv.stefworks.ml/')" class="w3-button w3-theme-d2 w3-margin-bottom"><i
+            class="fa fa-terminal"></i> &nbsp;Demo</button>
+      </div>
 
-    <!--THIRD SLIDER, controls the content of the Section3 above -->
-    <div id="Demo3" class="slidecontainer w3-container w3-padding-16" style="display: none">
+      <div class="Content3" style="display: none">
+        <img src="https://medialabamsterdam.com/toolkit/files/2016/06/DMT_logo.png" alt="Avatar" class="w3-left w3-margin-right"
+          style="width:60px">
+        <span class="w3-right w3-opacity">Nov 2018</span>
+        <h4>Design Thinking</h4><br>
+        <hr class="w3-clear">
+        <p>Design Thinking. JWT based authentication, reactive forms, redux.
+          Served from a Spring Boot app. Continuous Intergration with Jenkins github webhooks.
+        </p>
+        <div class="video-container">
+          <iframe width="853" height="480" src="https://www.youtube.com/embed/Lbq94Ef9qJY?start=3" frameborder="0"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="Content3" style="display: none">
+        <img src="https://4.bp.blogspot.com/-qgCd0X6Q5jo/WS7l8KhIztI/AAAAAAAABHk/w6t5pFbWdeUUjVoPFTjkvpraw3PDPtijwCLcB/s1600/Unity_Logo.png"
+          alt="Avatar" class="w3-left w3-margin-right" style="width:60px">
+        <span class="w3-right w3-opacity">January 2019</span>
+        <h4>Final Project</h4><br>
+        <hr class="w3-clear">
+        <p>Together with two colleagues we developed our final project at KEA.
+          We combined Scrum and Design thinking for our process and developed an augmented reality android APK and a
+          React admin page.
+          Click the demo below to browse the admin page.
+        </p>
+        <iframe src="http://ar.stefworks.ml/" style="border:none; width:100%; height:300px;"></iframe>
+
+        <button type="button" onclick="window.open('https://github.com/stefanosAgelastos/gps-tourist-app')" class="w3-button w3-theme-d1 w3-margin-bottom"><i
+            class="fa fa-github"></i> &nbsp;Github</button>
+        <button type="button" onclick="window.open('http://ar.stefworks.ml/')" class="w3-button w3-theme-d2 w3-margin-bottom"><i
+            class="fa fa-terminal"></i> &nbsp;Demo</button>
+      </div>
+      <!--THIRD PAGINATION, controls the content of the Section3 above -->
+      <div id="Demo3" class="slidecontainer w3-container w3-padding-16">
         <div class="w3-center">
-            <div class="w3-bar">
-              <a href="#" class="w3-bar-item w3-button">&laquo;</a>
-              <a href="#" class="w3-button">1</a>
-              <a href="#" class="w3-button">2</a>
-              <a href="#" class="w3-button">3</a>
-              <a href="#" class="w3-button">4</a>
-              <a href="#" class="w3-button">&raquo;</a>
-            </div>
-            </div>
-      <input type="range" min="0" max="100" step="1" class="slider" id="myRange3" oninput="mySlider('Section3')">
+          <div class="w3-bar">
+            <a href="#" class="w3-bar-item w3-button">&laquo;</a>
+            <a href="#" class="w3-button pContent3 w3-red" onclick="pagination('Content3',1,'w3-red')">1</a>
+            <a href="#" class="w3-button pContent3" onclick="pagination('Content3',2,'w3-red')">2</a>
+            <a href="#" class="w3-button pContent3" onclick="pagination('Content3',3,'w3-red')">3</a>
+            <a href="#" class="w3-button pContent3" onclick="pagination('Content3',4,'w3-red')">4</a>
+            <a href="#" class="w3-button pContent3" onclick="pagination('Content3',5,'w3-red')">5</a>
+            <a href="#" class="w3-button">&raquo;</a>
+          </div>
+        </div>
+      </div>
     </div>
+
   </div>
 
   <script>
-    /* Run this at load of page */
-    console.log("Starting the scripts");
-    /* EDIT: set initial Section indexes */
-    var initialSectionPosition = [0, 0, 0];
-    /* Set the max value of the sliders  */
-    var sliders = document.getElementsByClassName("slider");
-    var i;
-    for (i = 0; i < sliders.length; i++) {
-      /* finds how many SectionX elements exist */
-      let sectionClass = "Section" + (i + 1);
-      sliders[i].max = (document.getElementsByClassName(sectionClass).length - 1);  /* -1 so that that the slider starts from 0 */
-      sliders[i].value = initialSectionPosition[i]; /* position the slider at initial value */
-      console.log("Set max for " + sectionClass + " as " + sliders[i].max);
-      /* carousel(sectionClass, initialSectionPosition[i]);  *//* display initial content */
-    };
-    /* Script for the slider, receives the section class to slide through */
-    function mySlider(sectionClass) {
-      var slider = event.srcElement;
-      carousel(sectionClass, slider.value);
-      /* var output = document.getElementById(sectionId);
-      output.innerHTML = slider.value; */
-    }
 
-    function carousel(sectionClass, sliderValue) {
+    function pagination(contentClass, sliderValue, colorClass) {
       var i;
-      var x = document.getElementsByClassName(sectionClass);
+      var x = document.getElementsByClassName(contentClass);
+      var p = document.getElementsByClassName("p" + contentClass);
       for (i = 0; i < x.length; i++) {
         x[i].style.display = "none";
+        p[i].classList.remove(colorClass);
       }
-      if (sliderValue > x.length) { sliderValue = 1 }
-      x[sliderValue].style.display = "block";
-      /* setTimeout(carousel, 2000);  */ // for automatic rotation
+      if (sliderValue - 1 > x.length) { sliderValue = 1 }
+      x[sliderValue - 1].style.display = "block";
+      p[sliderValue - 1].classList.add(colorClass);
     }
   </script>
 </body>
