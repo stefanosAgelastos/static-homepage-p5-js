@@ -11,7 +11,7 @@ var options = [];
 var shortText;
 var longText;
 var type;
-var waveWidth = 120;
+var waveWidth = 110;
 var XMainMenu;
 var waveCenter;
 var mainMenuYPositions;
@@ -41,7 +41,7 @@ function setup() {
 
   colors = colorPalete.slice(0);
 
-  waveCenter = windowHeight / 2 - 28;
+  waveCenter = windowHeight / 2 - 29;
 
   XMainMenu = windowWidth / 20;
 
@@ -65,16 +65,16 @@ function setup() {
   _rootMenu.position(XMainMenu, mainMenuYPositions[3]).style('font-size', '20px');
   options.push(_rootMenu);
 
-  var _projects = createButton(longText[1]).addClass("w3-button").addClass("w3-round-xxlarge").addClass("w3-red").addClass("w3-hover-red");
-  _projects.position(XMainMenu, mainMenuYPositions[4]).style('color', colors[0]).style('font-size', '20px');
+  var _projects = createButton(longText[1]).addClass("w3-button").addClass("w3-round-xxlarge").addClass("w3-hover-red");
+  _projects.position(XMainMenu, mainMenuYPositions[4]).style('color', 'white').style('font-size', '20px').style('background-color', 'rgba(255, 0, 0, 0.5)');
   options.push(_projects);
 
-  var _selfies = createButton(longText[2]).addClass("w3-button").addClass("w3-round-xxlarge").addClass("w3-light-green").addClass("w3-hover-light-green");
-  _selfies.position(XMainMenu, mainMenuYPositions[5]).style('color', colors[1]).style('font-size', '20px');
+  var _selfies = createButton(longText[2]).addClass("w3-button").addClass("w3-round-xxlarge").addClass("w3-hover-green");
+  _selfies.position(XMainMenu, mainMenuYPositions[5]).style('color', 'black').style('font-size', '20px').style('background-color', 'rgba(0, 255, 0, 0.5)');
   options.push(_selfies);
 
-  var _experience = createButton(longText[3]).addClass("w3-button").addClass("w3-round-xxlarge").addClass("w3-blue").addClass("w3-hover-blue");
-  _experience.position(XMainMenu, mainMenuYPositions[6]).style('color', colors[2]).style('font-size', '20px');
+  var _experience = createButton(longText[3]).addClass("w3-button").addClass("w3-round-xxlarge").addClass("w3-hover-blue");
+  _experience.position(XMainMenu, mainMenuYPositions[6]).style('color', 'white').style('font-size', '20px').style('background-color', 'rgba(0, 0, 255, 0.5)');
   options.push(_experience);
 
   /* --------- */
@@ -159,7 +159,7 @@ function draw() {
     blendMode(SCREEN);
   }
   noFill();
-  strokeWeight(20);
+  strokeWeight(46);
   colors.forEach(element => {
     stroke(element);
     i = colors.indexOf(element);
@@ -167,7 +167,7 @@ function draw() {
     for (var w = -20; w < width + 20; w += 5) {
       var h = height / 2;
       var factor = frameCount;
-      h += waveWidth * sin(w * 0.03 + factor * 0.07 + i * TWO_PI / 3) * pow(abs(sin(w * 0.001 + factor * 0.015)), 5);
+      h += waveWidth * sin(w * 0.03 + factor * 0.07 + i * TWO_PI / 3) * pow(abs(sin(w * 0.001 + factor * 0.015)), 1);
       curveVertex(w, h);
     }
     endShape();
