@@ -15,6 +15,7 @@ var waveWidth = 110;
 var XMainMenu;
 var waveCenter;
 var mainMenuYPositions;
+var selectedMenuIndex = 0;
 
 function setup() {
 
@@ -80,22 +81,10 @@ function setup() {
   /* ---------- */
 
   /* --- SETUP ONCLICK METHODS */
-
-  _rootMenu.mousePressed(() => {
-    mainMenuSelect(_rootMenu);
-    hideAllContent();
-  });
-  _projects.mousePressed(() => {
-    mainMenuSelect(_projects);
-    hideAllContent();
-    showContent(3);
-  });
+  _rootMenu.mousePressed(() => { mainMenuSelect(_rootMenu); });
+  _projects.mousePressed(() => { mainMenuSelect(_projects); });
   _selfies.mousePressed(() => { mainMenuSelect(_selfies) });
-  _experience.mousePressed(() => {
-    mainMenuSelect(_experience);
-    hideAllContent();
-    showContent(2);
-  });
+  _experience.mousePressed(() => { mainMenuSelect(_experience); });
 
   /* --------- */
 
@@ -120,25 +109,35 @@ function configureRelativeMenuPositions() {
 
 }
 
+
+function showSelectedContent() {
+  var htmlSectNumber;
+  if(selectedMenuIndex == 1){
+    htmlSectNumber = 3;
+  } else if (selectedMenuIndex == 3) {
+    htmlSectNumber = 2;
+  }
+  if(htmlSectNumber){
+    hideAllContent();
+    select("#Section" + htmlSectNumber).position(options[0].size().width + 7, 0).style("z-index", "10").show().size(windowWidth - options[0].size().width - 20, windowHeight);
+    select("#Demo" + htmlSectNumber).position(0, windowHeight - 100);
+  } else {
+    hideAllContent();
+  }
+}
+
 function hideAllContent() {
   var i;
   for (i = 2; i < 4; i++) {
     select("#Section" + i).hide();
-    select(".Content" + i).hide();
-    select("#Demo" + i).hide();
   }
-}
-
-function showContent(htmlSectNumber) {
-  select("#Section" + htmlSectNumber).position(options[0].size().width + 7, 0).style("z-index", "10").show().size(windowWidth - options[0].size().width - 20, windowHeight);
-  select(".Content" + htmlSectNumber).show();
-  select("#Demo" + htmlSectNumber).position(0, windowHeight - 100).show();
 }
 
 /* method that shifts the option positions so that the selected is in position 3 */
 function mainMenuSelect(selected) {
   var currentX = XMainMenu;
-  if (selected != options[0]) {
+  selectedMenuIndex = options.indexOf(selected);
+  if (selectedMenuIndex != 0) {
     currentX = 5;
     options.forEach((element) => {
       element.html(shortText[options.indexOf(element)]);
@@ -150,16 +149,16 @@ function mainMenuSelect(selected) {
     });
     select(".LI-profile-badge").position(XMainMenu, XMainMenu).show();
   }
-  var selectedIndex = options.indexOf(selected);
   var i;
   for (i = 0; i < options.length; i++) {
-    options[i].position(currentX, mainMenuYPositions[3 - selectedIndex + i]);
+    options[i].position(currentX, mainMenuYPositions[3 - selectedMenuIndex + i]);
     options[i].elt.style.position = 'fixed';
   }
     colors = colorPalete.slice(0);
-    if (selectedIndex != 0) {
-      colors.splice(selectedIndex - 1, 1);
+    if (selectedMenuIndex != 0) {
+      colors.splice(selectedMenuIndex - 1, 1);
     }
+    showSelectedContent();
   }
 
 
@@ -193,17 +192,5 @@ function mainMenuSelect(selected) {
   function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
     configureRelativeMenuPositions();
-    hideAllContent();
-    mainMenuSelect(options[0]);
+    mainMenuSelect(options[selectedMenuIndex]);
   }
-
-
-  /* function mousePressed() {
-    colors.pop();
-  
-     if (type == 0) {
-      type = 1;
-    } else {
-      type = 0;
-    }
-    }*/
