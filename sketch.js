@@ -46,7 +46,7 @@ function setup() {
 
   /* -------- */
   /* -- CREATE CANVAS -- */
- var canvas = createCanvas(windowWidth, windowHeight).style('z-index', '-3'); 
+ var canvas = createCanvas(windowWidth, windowHeight).style('z-index', '-3').style('display', 'block'); 
  canvas.elt.style.position = 'fixed';
   /* -------- */
 
