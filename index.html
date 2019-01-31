@@ -266,24 +266,24 @@ max-height: 50vh;
       <br>
 
       <div class="Content3" style="background: rgba(255, 255, 255, 0.9)">
-        <div class=" w3-section w3-padding-small">
+        <div class=" w3-section w3-padding-large w3-card w3-white w3-round">
           <img src="https://4.bp.blogspot.com/-qgCd0X6Q5jo/WS7l8KhIztI/AAAAAAAABHk/w6t5pFbWdeUUjVoPFTjkvpraw3PDPtijwCLcB/s1600/Unity_Logo.png"
             alt="Avatar" class="w3-left w3-margin-right" style="width:60px">
           <span class="w3-right w3-opacity">January 2019</span>
           <h4>AR System</h4><br>
+          <hr class="w3-clear">
+          <button type="button" onclick="window.open('https://github.com/stefanosAgelastos/gps-tourist-app')" class="w3-button w3-theme-d1 w3-margin-bottom"><i
+              class="fa fa-github"></i> &nbsp;Github</button>
+          <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom" onclick="document.getElementById('modalAR').style.display='block'"><i
+              class="fa fa-terminal"></i>
+            &nbsp;React Demo</button>
+          <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom" onclick="window.open('https://ar.stefworks.ml/').style.display='block'"><i
+              class="fa fa-external-link-square"></i>
+            &nbsp;ar.stefworks.ml</button>
         </div>
-        <button type="button" onclick="window.open('https://github.com/stefanosAgelastos/gps-tourist-app')" class="w3-button w3-theme-d1 w3-margin-bottom"><i
-            class="fa fa-github"></i> &nbsp;Github</button>
-        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom" onclick="document.getElementById('modalAR').style.display='block'"><i
-            class="fa fa-terminal"></i>
-          &nbsp;React Demo</button>
-        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom" onclick="window.open('https://ar.stefworks.ml/').style.display='block'"><i
-            class="fa fa-external-link-square"></i>
-          &nbsp;ar.stefworks.ml</button>
-        <hr class="w3-clear">
 
         <div class="w3-section w3-padding-small" style="">
-          <h5 class="w3-opacity"> <b>About the project</b></h5>
+          <h5 class="w3-opacity"><b>About the project</b></h5>
           Team final project for KEA's Datamatiker AP. <br>
           <div class="w3-container w3-card w3-white w3-round w3-section">
             <img src="homepage\problem.png" class="w3-round" style="max-width:100%; " alt="">
@@ -296,18 +296,18 @@ max-height: 50vh;
           <br> The system owner can add new locations and feed the application with new content. <br>
           <div class="w3-container w3-card w3-white w3-round w3-section">
             <img src="homepage\process.png" class="w3-round" style="max-width:100%; " alt="">
+            <hr class="w3-clear">
           </div>
         </div>
-        <hr class="w3-clear">
         <div class="w3-section w3-padding-small">
           <h5 class="w3-opacity"> <b>Tech Stack</b></h5>
           <div class="w3-container w3-card w3-white w3-round w3-section">
             <img src="homepage\system.png" class="w3-round" style="max-width:100%;" alt=""> <br>
           </div>
-          <p> ▪ Android APK by Unity3D and Vuforia </p>
+          <p>▪ Android APK by Unity3D and Vuforia </p>
           <p>▪ React isomorphic front end application </p>
           <p>▪ Node.js express API and server side rendering </p>
-          <p>▪ MongoDB for flexible structured object persistence </p>
+          <p>▪ MongoDB for semi-structured data model persistence </p>
           <p>▪ Heroku PaaS staging environment</p>
         </div>
         <div id="modalAR" class="w3-modal" onclick="this.style.display='none'">
