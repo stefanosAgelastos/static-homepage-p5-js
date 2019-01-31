@@ -83,7 +83,7 @@ function setup() {
   /* --- SETUP ONCLICK METHODS */
   _rootMenu.mousePressed(() => { mainMenuSelect(_rootMenu); });
   _projects.mousePressed(() => { mainMenuSelect(_projects); });
-  _selfies.mousePressed(() => { mainMenuSelect(_selfies) });
+  _selfies.mousePressed(() => { mainMenuSelect(_selfies); });
   _experience.mousePressed(() => { mainMenuSelect(_experience); });
 
   /* --------- */
@@ -116,6 +116,8 @@ function showSelectedContent(toSelect) {
     htmlSectNumber = 3;
   } else if (toSelect == 3) {
     htmlSectNumber = 2;
+  } else if(toSelect == 2){
+    htmlSectNumber = 1;
   }
   if(htmlSectNumber){
     if(selectedMenuIndex != toSelect){
@@ -131,7 +133,7 @@ function showSelectedContent(toSelect) {
 
 function hideAllContent() {
   var i;
-  for (i = 2; i < 4; i++) {
+  for (i = 1; i < 4; i++) {
     select("#Section" + i).hide();
   }
 }

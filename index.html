@@ -63,61 +63,58 @@ max-height: 50vh;
   <!-- SECTION1 -->
   <div>
 
-    <div class="w3-display-container w3-red Section1 w3-padding-16" style="display: none">
-      <div class="w3-card-4" style="overflow:hidden">
+    <div id="Section1" class="w3-display-container w3-white w3-padding-16" style="display: none">
+
+      <div class="w3-card-4 Content1" style="overflow:hidden">
         <img src="homepage/kid.jpg" class="w3-round" style="max-width:100%" alt="">
         <h2 class="w3-display-bottomright w3-padding-32 w3-text-grey w3-container" style="text-shadow: 2px 2px white;">working
           on<br>
           the tan </h2>
       </div>
-    </div>
 
-    <div class="w3-display-container w3-red Section1 w3-margin" style="display: none">
-      <div class="w3-card-4" style="overflow:hidden">
+      <div class="w3-card-4 Content1" style="display: none; overflow:hidden">
         <img src="homepage/volunteerPride.jpg" class="w3-round" style="max-width:100%" alt="">
         <h2 class="w3-display-topleft w3-padding-32 w3-text-green w3-container" style="text-shadow: 2px 2px red;">here,
           I am letting some Athens Pride volunteers know</h2>
         <h2 class="w3-display-bottomright w3-padding-32 w3-text-green w3-container" style="text-shadow: 2px 2px red;">
           the parade is not gonna wait for them</h2>
       </div>
-    </div>
 
-    <div class="w3-display-container w3-red Section1 w3-padding-16" style="display: none">
-      <div class="w3-card-4" style="overflow:hidden">
+      <div class="w3-card-4 Content1" style="display: none; overflow:hidden">
         <img src="homepage/book.jpg" class="w3-round" style="max-width:100%" alt="">
         <h5 class="w3-display-topright w3-padding-32 w3-text-grey w3-container" style="text-shadow: 2px 2px white;">..reflecting
           upon my model career <br>how the end came before the start...</h5>
       </div>
 
-    </div>
-
-    <div class="w3-display-container w3-red Section1 w3-margin" style="display: none">
-      <div class="w3-card-4" style="overflow:hidden">
+      <div class="w3-card-4 Content1" style="display: none; overflow:hidden">
         <img src="homepage/instaFamily.png" class="w3-round" style="max-width:100%" alt="">
         <h5 class="w3-display-topleft w3-padding-32 w3-text-white w3-container" style="text-shadow: 2px 2px white;"><br>surviving
           the Danish winter is
           easy<br>with my sister and niece next door</h5>
       </div>
-    </div>
 
-    <div class="w3-display-container w3-red Section1 w3-margin" style="display: none">
-      <div class="w3-card-4" style="overflow:hidden">
+      <div class="w3-card-4 Content1" style="display: none; overflow:hidden">
         <img src="homepage\intern.jpg" class="w3-round" style="max-width:100%" alt="">
       </div>
-    </div>
 
-    <div class="w3-display-container w3-red Section1 w3-margin" style="display: none">
-      <div class="w3-card-4" style="overflow:hidden">
-        <img src="homepage/linkedInQR.jpg" class="w3-round" style="max-width:100%" alt="">
+
+
+      <!--FIRST SLIDER, controls the content of the Section1 above -->
+      <br>
+      <br>
+      <br>
+      <div id="Demo1" class="slidecontainer w3-container w3-round" style="background-color:rgba(0, 255, 0, 0.7);">
+        <div class="w3-center">
+          <div class="w3-bar" style="margin-top: 8px">
+            <a href="#" style=" color: black;" class="w3-button pContent1 w3-hover-green w3-green" onclick="pagination('Content1',1,'w3-green')">1</a>
+            <a href="#" style=" color: black;" class="w3-button pContent1 w3-hover-green" onclick="pagination('Content1',2,'w3-green')">2</a>
+            <a href="#" style=" color: black;" class="w3-button pContent1 w3-hover-green" onclick="pagination('Content1',3,'w3-green')">3</a>
+            <a href="#" style=" color: black;" class="w3-button pContent1 w3-hover-green" onclick="pagination('Content1',4,'w3-green')">4</a>
+            <a href="#" style=" color: black;" class="w3-button pContent1 w3-hover-green" onclick="pagination('Content1',5,'w3-green')">5</a>
+          </div>
+        </div>
       </div>
     </div>
-
-    <!--FIRST SLIDER, controls the content of the Section1 above -->
-    <div id="Demo1" class="slidecontainer w3-container w3-padding-16" style="display: none">
-      <input type="range" min="0" max="100" step="1" class="slider" id="myRange1" oninput="mySlider('Section1')">
-    </div>
-
-
   </div>
 
   <!-- SECTION2  -->
