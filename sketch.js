@@ -119,7 +119,7 @@ function showSelectedContent() {
   }
   if(htmlSectNumber){
     hideAllContent();
-    select("#Section" + htmlSectNumber).position(options[0].size().width + 7, 0).style("z-index", "10").show().size(windowWidth - options[0].size().width - 20, windowHeight);
+    select("#Section" + htmlSectNumber).position(options[0].size().width + 7, 0).style("z-index", "10").show().size(windowWidth - options[0].size().width - 20, AUTO);
     select("#Demo" + htmlSectNumber).position(0, windowHeight - 100);
   } else {
     hideAllContent();
