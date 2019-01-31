@@ -110,20 +110,23 @@ function configureRelativeMenuPositions() {
 }
 
 
-function showSelectedContent() {
+function showSelectedContent(toSelect) {
   var htmlSectNumber;
-  if(selectedMenuIndex == 1){
+  if(toSelect == 1){
     htmlSectNumber = 3;
-  } else if (selectedMenuIndex == 3) {
+  } else if (toSelect == 3) {
     htmlSectNumber = 2;
   }
   if(htmlSectNumber){
-    hideAllContent();
+    if(selectedMenuIndex != toSelect){
+      hideAllContent();
+    }
     select("#Section" + htmlSectNumber).position(options[0].size().width + 10, 0).style("z-index", "10").show().size(windowWidth - options[0].size().width - 20, AUTO);
     select("#Demo" + htmlSectNumber).position(0, windowHeight - 100);
   } else {
     hideAllContent();
   }
+  selectedMenuIndex = toSelect;
 }
 
 function hideAllContent() {
@@ -136,8 +139,8 @@ function hideAllContent() {
 /* method that shifts the option positions so that the selected is in position 3 */
 function mainMenuSelect(selected) {
   var currentX = XMainMenu;
-  selectedMenuIndex = options.indexOf(selected);
-  if (selectedMenuIndex != 0) {
+  var toselect = options.indexOf(selected);
+  if (toselect != 0) {
     currentX = 5;
     options.forEach((element) => {
       element.html(shortText[options.indexOf(element)]);
@@ -151,14 +154,14 @@ function mainMenuSelect(selected) {
   }
   var i;
   for (i = 0; i < options.length; i++) {
-    options[i].position(currentX, mainMenuYPositions[3 - selectedMenuIndex + i]);
+    options[i].position(currentX, mainMenuYPositions[3 - toselect + i]);
     options[i].elt.style.position = 'fixed';
   }
     colors = colorPalete.slice(0);
-    if (selectedMenuIndex != 0) {
-      colors.splice(selectedMenuIndex - 1, 1);
+    if (toselect != 0) {
+      colors.splice(toselect - 1, 1);
     }
-    showSelectedContent();
+    showSelectedContent(toselect);
   }
 
 
