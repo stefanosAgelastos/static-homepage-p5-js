@@ -54,11 +54,16 @@ max-height: 50vh;
   <button id="_experience" class="w3-button w3-round-xxlarge w3-hover-blue" style="display: none; position: fixed; color: white; background-color:rgba(0, 0, 255, 0.5); font-size: 20px;">Exp</button>
 
   <!-- LINKEDIN BADGE -->
-  <div class="LI-profile-badge" data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal"
-    data-theme="light" data-vanity="stefanosagelastos" style="display: none">
-    <a class="LI-simple-link" href='https://dk.linkedin.com/in/stefanosagelastos?trk=profile-badge'>Stefanos
-      Agelastos</a>
+  <a id="profileInfo" href='https://dk.linkedin.com/in/stefanosagelastos?trk=profile-badge' onmouseover="document.getElementById('profileBadge').style.display = 'block';"
+    onmouseout="document.getElementById('profileBadge').style.display = 'none';" onclick="document.getElementById('profileBadge').style.display = 'block';"
+    style="display: none">
+    Stefanos Agelastos <i class="fa fa-linkedin"></i></a>
+  <div id="profileBadge" style="display: none">
+    <div class="LI-profile-badge" data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal"
+      data-theme="dark" data-vanity="stefanosagelastos"><a class="LI-simple-link" href='https://dk.linkedin.com/in/stefanosagelastos?trk=profile-badge'>Stefanos
+        Agelastos</a></div>
   </div>
+  </a>
 
   <!-- SECTION1 -->
   <div>
@@ -119,70 +124,66 @@ max-height: 50vh;
 
   <!-- SECTION2  -->
   <div class="w3-content">
-    <div id="Section2" class="w3-card w3-white w3-round" style="display: none">
+    <div id="Section2" class=" w3-round" style="display: none;">
 
-      <div class="Content2">
-        <h6 class="w3-text-grey w3-margin-right w3-right">Copenhagen</h6>
-        <div class="w3-container">
+      <div class="Content2" style="background: rgba(255, 255, 255, 0.9)">
+        <div class="w3-card w3-white w3-round">
+          <h2 class="w3-text-grey w3-margin w3-padding-16 w3-section">Internship <br>
+            &#x1F4CD;ProjectLab KEA</h2>
+        </div>
+
+        <div class="w3-container w3-white w3-card w3-round w3-section">
           <h5 class="w3-opacity"><b>Intern / <a href="http://www.koebenhavnerture.dk/" target="_blank">
                 Københavner Ture</a></b></h5>
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i> Oct 2018 - Nov 2018</h6>
           <p>In a multidisciplinary team, we developed an AR
-            solution for this local guided-tours company.
-            Our goal is to "Bring Stories Alive" as well as to add a competitive advantage in the company's SoMe
-            presence. Received good feedback.
+            solution for this local guided-tours company.<br>
+            Our goal was to "Bring Stories Alive" as well as to add a competitive advantage <br> to the company's SoMe
+            presence. <br> Received good feedback.
             <hr>
         </div>
-        <div class="w3-container">
+
+        <div class="w3-container w3-white w3-card w3-round w3-section">
           <h5 class="w3-opacity"><b>Intern / <a href="http://www.chase-race.com/" target="_blank">Chase-Race</a></b></h5>
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2018 - Oct 2018</h6>
           <p>Working with various product development tecniques, we designed and developed a VR experience for
-            marketing purposes.
-            We went also through an intensive 3-day course on Unity 3D.</p><br>
+            marketing purposes.<br>
+            We also went through an intensive 4-day course on Unity 3D.</p>
           <hr>
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>Intern / <a href="http://www.koebenhavnerture.dk/" target="_blank">
-                  Københavner Ture</a></b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i> Oct 2018 - Nov 2018</h6>
-            <p>In a multidisciplinary team, we developed an AR
-              solution for this local guided-tours company.
-              Our goal is to "Bring Stories Alive" as well as to add a competitive advantage in the company's SoMe
-              presence. Received good feedback.
-              <hr>
-          </div>
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>Intern / <a href="http://www.chase-race.com/" target="_blank">Chase-Race</a></b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2018 - Oct 2018</h6>
-            <p>Working with various product development tecniques, we designed and developed a VR experience for
-              marketing purposes.
-              We went also through an intensive 3-day course on Unity 3D.</p><br>
-          </div>
         </div>
       </div>
 
-      <div class="Content2" style="display: none">
-        <h6 class="w3-text-grey w3-margin-right w3-right">Copenhagen</h6>
+      <div class="Content2" style="display: none; background: rgba(255, 255, 255, 0.9)">
+        <div class="w3-card w3-white w3-round w3-section">
+          <h2 class="w3-text-grey w3-margin  w3-padding-16">Student Jobs<br>
+            &#x1F4CD;København</h2>
+        </div>
 
-        <div class="w3-container">
+        <div class="w3-container w3-card w3-white w3-round w3-section">
           <h5 class="w3-opacity"><b>Bartender / <a href="https://www.cosybar.dk/" target="_blank">Cosy Bar</a></b></h5>
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sep 2017 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
-          <p>Old gaybar in downtown Copenhagen, cosy atmosphere. I work long night shifts every other weekend, so I
+          <p>Old gaybar in downtown Copenhagen, cosy atmosphere.<br> I work long night shifts every other weekend, so I
             get
             more time to concentrate on my studies.
             <hr>
         </div>
-        <div class="w3-container">
+
+        <div class="w3-container w3-card w3-white w3-round w3-section">
           <h5 class="w3-opacity"><b>Head Waiter / <a href="http://asador.dk/" target="_blank">Asador</a></b></h5>
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2016 - Sep 2017</h6>
-          <p> Argentenian Stakehouse in Cristianshavn borrow, good meat and whine. I still have excellent
+          <p> Argentenian Stakehouse in Cristianshavn borrow, good meat and wine.<br> I have excellent
             relationship
-            with the owners, and work extra shifts when needed.</p><br>
+            with the owners, and work extra shifts when needed.</p>
+          <hr>
         </div>
       </div>
 
-      <div class="Content2" style="display: none">
-        <h6 class="w3-text-grey w3-margin-right w3-right">Madrid</h6>
-        <div class="w3-container">
+      <div class="Content2" style="display: none; background: rgba(255, 255, 255, 0.9)">
+        <div class="w3-card w3-white w3-round">
+          <h2 class="w3-text-grey w3-margin  w3-padding-16 w3-section">Retail Experience<br>
+            &#x1F4CD;Madrid</h2>
+        </div>
+        <div class="w3-container w3-card w3-white w3-round w3-section">
           <h5 class="w3-opacity"><b>Fashion Advisor / <a href="https://www.uterque.com/dk/" target="_blank">“Uterqüe”
                 Flagship Store (Inditex)</a></b></h5>
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Nov 2015 - Jun 2016</h6>
@@ -191,20 +192,24 @@ max-height: 50vh;
             ▪ Sales maximization according to pre-specified KPIs</p>
           <hr>
         </div>
-        <div class="w3-container">
+
+        <div class="w3-container w3-card w3-white w3-round w3-section">
           <h5 class="w3-opacity"><b>Sales Manager & Shift Manager / <a href="https://www.facebook.com/BovinusLuxury/"
                 target="_blank">Bovinus Luxury</a></b></h5>
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sep 2014 - Sep 2015</h6>
           <p>▪ Management of the day-to-day operation of a premium food market stall <br>
             ▪ Service quality management and assurance <br>
             ▪ Selection and training of employees</p>
+          <hr>
         </div>
       </div>
 
-      <div class="Content2" style="display: none">
-        <h6 class="w3-text-grey w3-margin-right w3-right">Athens</h6>
-
-        <div class="w3-container">
+      <div class="Content2" style="display: none; background: rgba(255, 255, 255, 0.9)">
+        <div class="w3-card w3-white w3-round">
+          <h2 class="w3-text-grey w3-margin w3-padding-16 w3-section">Volunteer Work <br>
+            &#x1F4CD;Athens</h2>
+        </div>
+        <div class="w3-container w3-card w3-white w3-round w3-section">
           <h5 class="w3-opacity"><b>Member of the Organizing Committee / <a href="https://www.athenspride.eu" target="_blank">Athens
                 Pride</a> </b></h5>
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2009 - 2012</h6>
@@ -214,7 +219,8 @@ max-height: 50vh;
             ▪ Volunteers recruiting, training and coordination</p>
           <hr>
         </div>
-        <div class="w3-container">
+
+        <div class="w3-container w3-card w3-white w3-round w3-section">
           <h5 class="w3-opacity"><b>Founding Member / <a href="https://www.colouryouth.gr" target="_blank">Colour
                 Youth,
                 LGBTQ Youth Community</a> </b></h5>
@@ -222,6 +228,17 @@ max-height: 50vh;
           <p>▪ Secretary in the BoD <br>
             ▪ Strategic planning of the organization’s operations <br>
             ▪ Volunteers recruiting, training and coordination</p>
+          <hr>
+        </div>
+
+        <div class="w3-container w3-card w3-white w3-round w3-section">
+          <h5 class="w3-opacity"><b>Merchandising and Clothes Shop / Hellenic Red Cross </b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2009 - 2011</h6>
+          <p>▪ Shop manager <br>
+            ▪ Market Research <br>
+            ▪ Sales
+          </p>
+          <hr>
         </div>
       </div>
 
@@ -245,83 +262,196 @@ max-height: 50vh;
   <!-- SECTION3  -->
   <div class="w3-content">
 
-    <div id="Section3" class=" w3-card w3-white w3-round " style="display: none">
+    <div id="Section3" style="display: none">
       <br>
 
-      <div class="Content3">
-        <img src="https://4.bp.blogspot.com/-qgCd0X6Q5jo/WS7l8KhIztI/AAAAAAAABHk/w6t5pFbWdeUUjVoPFTjkvpraw3PDPtijwCLcB/s1600/Unity_Logo.png"
-          alt="Avatar" class="w3-left w3-margin-right" style="width:60px">
-        <span class="w3-right w3-opacity">January 2019</span>
-        <h4>Final Project</h4><br>
-        <hr class="w3-clear">
-        <p>Together with two colleagues we combined Scrum and Design thinking for our process and developed an
-          augmented reality android APK and a
-          React admin page.
-        </p>
-        <iframe src="http://ar.stefworks.ml/" style="border:none; width:100%; height:47vh;"></iframe>
-
+      <div class="Content3" style="background: rgba(255, 255, 255, 0.9)">
+        <div class=" w3-section w3-padding-small">
+          <img src="https://4.bp.blogspot.com/-qgCd0X6Q5jo/WS7l8KhIztI/AAAAAAAABHk/w6t5pFbWdeUUjVoPFTjkvpraw3PDPtijwCLcB/s1600/Unity_Logo.png"
+            alt="Avatar" class="w3-left w3-margin-right" style="width:60px">
+          <span class="w3-right w3-opacity">January 2019</span>
+          <h4>AR System</h4><br>
+        </div>
         <button type="button" onclick="window.open('https://github.com/stefanosAgelastos/gps-tourist-app')" class="w3-button w3-theme-d1 w3-margin-bottom"><i
             class="fa fa-github"></i> &nbsp;Github</button>
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom" onclick="document.getElementById('modalAR').style.display='block'"><i
+            class="fa fa-terminal"></i>
+          &nbsp;React Demo</button>
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom" onclick="window.open('https://ar.stefworks.ml/').style.display='block'"><i
+            class="fa fa-external-link-square"></i>
+          &nbsp;ar.stefworks.ml</button>
+        <hr class="w3-clear">
+
+        <div class="w3-section w3-padding-small" style="">
+          <h5 class="w3-opacity"> <b>About the project</b></h5>
+          Team final project for KEA's Datamatiker AP. <br>
+          <div class="w3-container w3-card w3-white w3-round w3-section">
+            <img src="homepage\problem.png" class="w3-round" style="max-width:100%; " alt="">
+          </div>
+          <br> Together with two colleagues we combined Scrum and Design thinking for our process and developed an
+          augmented reality android tourist guide
+          <br> and a supporting administration system.
+          <br> The user harvests GPS and AR technologies through their phone and consumes content relevant to their
+          location.
+          <br> The system owner can add new locations and feed the application with new content. <br>
+          <div class="w3-container w3-card w3-white w3-round w3-section">
+            <img src="homepage\process.png" class="w3-round" style="max-width:100%; " alt="">
+          </div>
+        </div>
+        <hr class="w3-clear">
+        <div class="w3-section w3-padding-small">
+          <h5 class="w3-opacity"> <b>Tech Stack</b></h5>
+          <div class="w3-container w3-card w3-white w3-round w3-section">
+            <img src="homepage\system.png" class="w3-round" style="max-width:100%;" alt=""> <br>
+          </div>
+          <p> ▪ Android APK by Unity3D and Vuforia </p>
+          <p>▪ React isomorphic front end application </p>
+          <p>▪ Node.js express API and server side rendering </p>
+          <p>▪ MongoDB for flexible structured object persistence </p>
+          <p>▪ Heroku PaaS staging environment</p>
+        </div>
+        <div id="modalAR" class="w3-modal" onclick="this.style.display='none'">
+          <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+          <div class="w3-modal-content w3-animate-zoom">
+            <iframe src="https://ar.stefworks.ml/" style="border:none; width:100%; height:95vh;"></iframe>
+          </div>
+        </div>
       </div>
 
-      <div class="Content3" style="display: none">
-        <img src="https://medialabamsterdam.com/toolkit/files/2016/06/DMT_logo.png" alt="Avatar" class="w3-left w3-margin-right"
-          style="width:60px">
-        <span class="w3-right w3-opacity">Nov 2018</span>
-        <h4>Prototype</h4><br>
+      <div class="Content3" style="display: none; background: rgba(255, 255, 255, 0.9);">
+        <div class=" w3-section w3-padding-small">
+          <img src="https://medialabamsterdam.com/toolkit/files/2016/06/DMT_logo.png" alt="Avatar" class="w3-left w3-margin-right"
+            style="width:60px">
+          <span class="w3-right w3-opacity">Nov 2018</span>
+          <h4>Prototype Development</h4><br>
+        </div>
         <hr class="w3-clear">
-        <p>Design Thinking. JWT based authentication, reactive forms, redux.
-          Served from a Spring Boot app. Continuous Intergration with Jenkins github webhooks.
-        </p>
+
+        <div class="w3-section w3-padding-small">
+          <h5 class="w3-opacity"> <b>About the project</b></h5>
+          A multidisciplinary team of 2 multimedia designers and 2 developers. We developed an AR
+          solution for this local guided-tours company.<br>
+          Our goal was to "Bring Stories Alive" as well as to add a competitive advantage <br> to the company's SoMe
+          presence.
+        </div>
+        <hr class="w3-clear">
+        <div class="w3-section w3-padding-small">
+          <h5 class="w3-opacity"> <b>The process</b></h5>
+          We went through a 4-day course on Unity 3D and 1 day on Ideation. We worked with Scrum. An experienced tutor
+          guided us while practising design methods from the <a href="https://medialabamsterdam.com/toolkit/">Amsterdam
+            MediaLab's Toolkit</a> .
+          <br> We researched about the target group of the company, and through ideation tecniques we developed a
+          series of prototypes.
+          <br> After iterative user testing we ended up with a working AR mobile application that we pitched to the
+          client during an open event.
+          <br> Recomendation letter available.
+        </div>
+
         <div class="video-container">
           <iframe width="853" height="480" src="https://www.youtube.com/embed/Lbq94Ef9qJY?start=3" frameborder="0"
             allowfullscreen></iframe>
         </div>
       </div>
 
-      <div class="Content3" style="display: none">
-        <img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png" alt="Avatar" class="w3-left w3-margin-right"
-          style="width:60px">
-        <span class="w3-right w3-opacity">May 2018</span>
-        <h4>Simple Chat</h4><br>
+      <div class="Content3" style="display: none; background: rgba(255, 255, 255, 0.9);">
+        <div class=" w3-section w3-padding-small">
+          <img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png" alt="Avatar" class="w3-left w3-margin-right"
+            style="width:60px">
+          <span class="w3-right w3-opacity">May 2018</span>
+          <h4>Simple Chat</h4><br>
+        </div>
 
-        <hr class="w3-clear">
-        <p>NODEjs app, JWT based authentication, websockets, SQL persistence, DOCKER compose containerization.
-        </p>
-        <iframe src="http://chat.stefworks.ml/" style="border:none; width:100%; height:47vh;"></iframe>
         <button type="button" onclick="window.open('https://github.com/stefanosAgelastos/chatNodejs')"" class="
           w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-github"></i> &nbsp;Github</button>
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom" onclick="document.getElementById('modalCHAT').style.display='block'"><i
+            class="fa fa-terminal"></i>
+          &nbsp;Demo</button>
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom" onclick="window.open('https://chat.stefworks.ml/').style.display='block'"><i
+            class="fa fa-external-link-square"></i>
+          &nbsp;chat.stefworks.ml</button>
+        <hr class="w3-clear">
+        <div class="w3-section w3-padding-small">
+          <h5 class="w3-opacity"> <b>About the project</b></h5>
+          Exam project for third Semester elective Full-Stack web development with Node.js and jQuery.
+        </div>
+        <hr class="w3-clear">
+        <div class="w3-section w3-padding-small">
+          <h5 class="w3-opacity"> <b>Tech Stack</b></h5>
+          NODE.js express app ▪ JWT based authentication ▪ socket.io ▪ kenx.js ▪ objection.js ▪ DOCKER compose
+          containerization
+        </div>
+
+        <div id="modalCHAT" class="w3-modal" onclick="this.style.display='none'">
+          <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+          <div class="w3-modal-content w3-animate-zoom">
+            <iframe src="https://chat.stefworks.ml/" style="border:none; width:100%; height:95vh;"></iframe>
+          </div>
+        </div>
       </div>
 
-      <div class="Content3" style="display: none">
-        <img src="https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg" alt="Avatar" class="w3-left w3-margin-right"
-          style="width:60px">
-        <span class="w3-right w3-opacity">Jun 2018</span>
-        <h4>Administration SPA</h4><br>
-        <hr class="w3-clear">
-        <p>Angular5 front. JWT based authentication, reactive forms, redux.
-          Served from a Spring Boot app. Continuous Intergration with Jenkins github webhooks.
-        </p>
-        <iframe src="http://makeyourcv.stefworks.ml/" style="border:none; width:100%; height:47vh;"></iframe>
+      <div class="Content3" style="display: none; background: rgba(255, 255, 255, 0.9);">
+        <div class=" w3-section w3-padding-small">
+          <img src="https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg" alt="Avatar" class="w3-left w3-margin-right"
+            style="width:60px">
+          <span class="w3-right w3-opacity">Jun 2018</span>
+          <h4>Administration SPA</h4><br>
+        </div>
 
-        <button type="button" onclick="window.open('https://github.com/stefanosAgelastos/cvEditorFront')" class="w3-button w3-theme-d1 w3-margin-bottom"><i
+        <button type="button" onclick="window.open('https://github.com/stefanosAgelastos/cvEditorFront')" class="
+          w3-button w3-theme-d1 w3-margin-bottom"><i
             class="fa fa-github"></i> &nbsp;Github</button>
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom" onclick="document.getElementById('modalCV').style.display='block'"><i
+            class="fa fa-terminal"></i><del>
+            &nbsp;Demo </del></button>
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom" onclick="window.open('https://makeyourcv.stefworks.ml/').style.display='block'"><i
+            class="fa fa-external-link-square"></i>
+          &nbsp;makeyourcv.stefworks.ml</button>
+        <hr class="w3-clear">
+        <div class="w3-section w3-padding-small">
+          <h5 class="w3-opacity"> <b>About the project</b></h5>
+          Exam project for third Semester elective Front-end Development with Angular5. <br>
+          Received excellent evaluation
+        </div>
+        <hr class="w3-clear">
+        <div class="w3-section w3-padding-small">
+          <h5 class="w3-opacity"> <b>Tech Stack</b></h5>
+          Angular5 front ▪ JWT based authentication ▪ reactive forms ▪ redux <br>
+          Served from a Spring Boot app ▪ Continuous Intergration with Jenkins github webhooks.
+        </div>
+
+        <div id="modalCV" class="w3-modal" onclick="this.style.display='none'">
+          <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+          <div class="w3-modal-content w3-animate-zoom">
+            <iframe src="https://makeyourcv.stefworks.ml/" style="border:none; width:100%; height:95vh;"></iframe>
+          </div>
+        </div>
       </div>
 
-      <div class="Content3" style="display: none">
-        <img src="https://spring.io/img/homepage/icon-spring-cloud.svg" alt="Avatar" class="w3-left w3-margin-right"
-          style="width:60px">
-        <span class="w3-right w3-opacity">Jun 2018</span>
-        <h4>REST resources for Single Page Application</h4><br>
-        <hr class="w3-clear">
-        <p>Spring Boot back-end, REST resources. JWT based authentication, SWAGGER, H2 embedded
-          database. Continuous Intergration with Jenkins github webhooks.
-        </p>
+      <div class="Content3" style="display: none; background: rgba(255, 255, 255, 0.9);">
+        <div class=" w3-section w3-padding-small">
+          <img src="https://spring.io/img/homepage/icon-spring-cloud.svg" alt="Avatar" class="w3-left w3-margin-right"
+            style="width:60px">
+          <span class="w3-right w3-opacity">Jun 2018</span>
+          <h4>Java Rest API</h4><br>
+        </div>
 
-        <button type="button" onclick="window.open('https://github.com/stefanosAgelastos/personalRest')"" class="
-          w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-github"></i> &nbsp;Github</button>
-        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-terminal"></i> <del>
+        <button type="button" onclick="window.open('https://github.com/stefanosAgelastos/personalRest')" class="
+          w3-button w3-theme-d1 w3-margin-bottom"><i
+            class="fa fa-github"></i> &nbsp;Github</button>
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-terminal"></i><del>
             &nbsp;Demo </del></button>
+        <hr class="w3-clear">
+        <div class="w3-section w3-padding-small">
+          <h5 class="w3-opacity"> <b>About the project</b></h5>
+          Exam project for third Semester elective Spring Boot & Devops. <br>
+          Received excellent evaluation
+        </div>
+        <hr class="w3-clear">
+        <div class="w3-section w3-padding-small">
+          <h5 class="w3-opacity"> <b>Tech Stack</b></h5>
+          Spring Boot back-end ▪ REST resources ▪ JWT based authentication ▪ SWAGGER ▪ H2 embedded
+          database ▪ Continuous Intergration with Jenkins github webhooks
+        </div>
       </div>
 
       <!--THIRD PAGINATION, controls the content of the Section3 above -->

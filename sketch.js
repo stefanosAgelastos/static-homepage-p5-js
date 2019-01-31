@@ -35,9 +35,9 @@ function setup() {
 
   longText = [
     "STEFWORKS",
-    "My projects",
+    "A peek at my projects",
     "My life in selfies",
-    "My professional experience"
+    "Job experience"
   ];
 
   colors = colorPalete.slice(0);
@@ -72,7 +72,8 @@ function setup() {
   _experience.position(XMainMenu, mainMenuYPositions[6]).style("z-index", "1").show();
 
   /* --- DISPLAY LINKEDIN BADGE --- */
-  select(".LI-profile-badge").position(XMainMenu, XMainMenu).show();
+  select("#profileInfo").position(XMainMenu, XMainMenu).show();
+  select(".LI-profile-badge").position(XMainMenu, XMainMenu);
 
   /* ---------- */
 
@@ -147,12 +148,13 @@ function mainMenuSelect(selected) {
     options.forEach((element) => {
       element.html(shortText[options.indexOf(element)]);
     });
+    select("#profileInfo").position(XMainMenu, XMainMenu).hide();
     select(".LI-profile-badge").position(XMainMenu, XMainMenu).hide();
   } else {
     options.forEach((element) => {
       element.html(longText[options.indexOf(element)]);
     });
-    select(".LI-profile-badge").position(XMainMenu, XMainMenu).show();
+    select("#profileInfo").position(XMainMenu, XMainMenu).show();
   }
   var i;
   for (i = 0; i < options.length; i++) {
@@ -187,7 +189,7 @@ function mainMenuSelect(selected) {
       for (var w = -20; w < width + 20; w += 5) {
         var h = height / 2;
         var factor = frameCount;
-        h += waveWidth * sin(w * 0.03 + factor * 0.07 + i * TWO_PI / 3) * pow(abs(sin(w * 0.001 + factor * 0.015)), 1);
+        h += waveWidth * sin(w * 0.03 + factor/2 * 0.07 + i * TWO_PI / 3) * pow(abs(sin(w * 0.001 + factor/2 * 0.015)), 1);
         curveVertex(w, h);
       }
       endShape();
