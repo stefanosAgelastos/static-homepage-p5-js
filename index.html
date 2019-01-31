@@ -40,9 +40,23 @@ max-height: 50vh;
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
   <script src="sketch.js"></script>
+  <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 </head>
 
 <body>
+
+  <!-- BUTTONS MAIN MENU -->
+  <button id="_rootMenu" class="w3-button w3-round-xxlarge w3-black w3-hover-black" style="display: none; position: fixed; font-size: 20px;">SW</button>
+  <button id="_projects" class="w3-button w3-round-xxlarge w3-hover-red" style="display: none; position: fixed; background-color:rgba(255, 0, 0, 0.5); color: white; font-size: 20px;">Prj</button>
+  <button id="_selfies" class="w3-button w3-round-xxlarge w3-hover-green" style="display: none; position: fixed; background-color:rgba(0, 255, 0, 0.5);  font-size: 20px;">Pic</button>
+  <button id="_experience" class="w3-button w3-round-xxlarge w3-hover-blue" style="display: none; position: fixed; color: white; background-color:rgba(0, 0, 255, 0.5); font-size: 20px;">Exp</button>
+
+  <!-- LINKEDIN BADGE -->
+  <div class="LI-profile-badge" data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal"
+    data-theme="light" data-vanity="stefanosagelastos" style="display: none">
+    <a class="LI-simple-link" href='https://dk.linkedin.com/in/stefanosagelastos?trk=profile-badge'>Stefanos
+      Agelastos</a>
+  </div>
 
   <!-- SECTION1 -->
   <div>

@@ -41,43 +41,39 @@ function setup() {
 
   colors = colorPalete.slice(0);
 
-  waveCenter = windowHeight / 2 - 29;
-
-  XMainMenu = windowWidth / 20;
-
-  mainMenuYPositions = [
-    waveCenter - waveWidth - 3 * waveWidth / 2,
-    waveCenter - waveWidth - 2 * waveWidth / 2,
-    waveCenter - waveWidth - waveWidth / 2,
-    waveCenter,
-    waveCenter + waveWidth + waveWidth / 2,
-    waveCenter + waveWidth + 2 * waveWidth / 2,
-    waveCenter + waveWidth + 3 * waveWidth / 2
-  ];
+  configureRelativeMenuPositions();
 
   /* -------- */
   /* -- CREATE CANVAS -- */
-  createCanvas(windowWidth, windowHeight - 10);
+ var canvas = createCanvas(windowWidth, windowHeight).style('z-index', '-3'); 
+ canvas.elt.style.position = 'fixed';
   /* -------- */
 
-  /* --- CREATE MAIN MENU OPTIONS AND SET INITIAL POSITIONS --- */
-  var _rootMenu = createButton(longText[0]).addClass("w3-button").addClass("w3-round-xxlarge").addClass("w3-black").addClass("w3-hover-black");
-  _rootMenu.position(XMainMenu, mainMenuYPositions[3]).style('font-size', '20px');
+  /* --- SELECT MAIN MENU OPTIONS  --- */
+  var _rootMenu = select("#_rootMenu").html(longText[0])
   options.push(_rootMenu);
 
-  var _projects = createButton(longText[1]).addClass("w3-button").addClass("w3-round-xxlarge").addClass("w3-hover-red");
-  _projects.position(XMainMenu, mainMenuYPositions[4]).style('color', 'white').style('font-size', '20px').style('background-color', 'rgba(255, 0, 0, 0.5)');
+  var _projects = select("#_projects").html(longText[1]);
   options.push(_projects);
 
-  var _selfies = createButton(longText[2]).addClass("w3-button").addClass("w3-round-xxlarge").addClass("w3-hover-green");
-  _selfies.position(XMainMenu, mainMenuYPositions[5]).style('color', 'black').style('font-size', '20px').style('background-color', 'rgba(0, 255, 0, 0.5)');
+  var _selfies = select("#_selfies").html(longText[2]);
   options.push(_selfies);
 
-  var _experience = createButton(longText[3]).addClass("w3-button").addClass("w3-round-xxlarge").addClass("w3-hover-blue");
-  _experience.position(XMainMenu, mainMenuYPositions[6]).style('color', 'white').style('font-size', '20px').style('background-color', 'rgba(0, 0, 255, 0.5)');
+  var _experience = select("#_experience").html(longText[3]);
   options.push(_experience);
 
   /* --------- */
+
+  /* POSITION OF MAIN MENU BUTTONS */
+  _rootMenu.position(XMainMenu, mainMenuYPositions[3]).style("z-index", "1").show();
+  _projects.position(XMainMenu, mainMenuYPositions[4]).style("z-index", "1").show();
+  _selfies.position(XMainMenu, mainMenuYPositions[5]).style("z-index", "1").show();
+  _experience.position(XMainMenu, mainMenuYPositions[6]).style("z-index", "1").show();
+
+  /* --- DISPLAY LINKEDIN BADGE --- */
+  select(".LI-profile-badge").position(XMainMenu, XMainMenu).show();
+
+  /* ---------- */
 
   /* --- SETUP SCROLLING FUNCTIONALITY --- */
 
@@ -107,6 +103,23 @@ function setup() {
   type = 0;
 }
 
+function configureRelativeMenuPositions() {
+  waveCenter = windowHeight / 2 - 23;
+
+  XMainMenu = windowWidth / 20;
+
+  mainMenuYPositions = [
+    waveCenter - waveWidth - 3 * waveWidth / 2,
+    waveCenter - waveWidth - 2 * waveWidth / 2,
+    waveCenter - waveWidth - waveWidth / 2,
+    waveCenter,
+    waveCenter + waveWidth + waveWidth / 2,
+    waveCenter + waveWidth + 2 * waveWidth / 2,
+    waveCenter + waveWidth + 3 * waveWidth / 2
+  ];
+
+}
+
 function hideAllContent() {
   var i;
   for (i = 2; i < 4; i++) {
@@ -129,71 +142,68 @@ function mainMenuSelect(selected) {
     currentX = 5;
     options.forEach((element) => {
       element.html(shortText[options.indexOf(element)]);
-    })
+    });
+    select(".LI-profile-badge").position(XMainMenu, XMainMenu).hide();
   } else {
     options.forEach((element) => {
       element.html(longText[options.indexOf(element)]);
-    })
+    });
+    select(".LI-profile-badge").position(XMainMenu, XMainMenu).show();
   }
   var selectedIndex = options.indexOf(selected);
   var i;
   for (i = 0; i < options.length; i++) {
     options[i].position(currentX, mainMenuYPositions[3 - selectedIndex + i]);
+    options[i].elt.style.position = 'fixed';
   }
-  colors = colorPalete.slice(0);
-  if (selectedIndex != 0) {
-    colors.splice(selectedIndex - 1, 1);
-  }
-}
-
-
-
-function draw() {
-  blendMode(BLEND);
-
-  if (type == 0) {
-    background(255);
-    blendMode(EXCLUSION);
-  } else {
-    background(0);
-    blendMode(SCREEN);
-  }
-  noFill();
-  strokeWeight(46);
-  colors.forEach(element => {
-    stroke(element);
-    i = colors.indexOf(element);
-    beginShape();
-    for (var w = -20; w < width + 20; w += 5) {
-      var h = height / 2;
-      var factor = frameCount;
-      h += waveWidth * sin(w * 0.03 + factor * 0.07 + i * TWO_PI / 3) * pow(abs(sin(w * 0.001 + factor * 0.015)), 1);
-      curveVertex(w, h);
+    colors = colorPalete.slice(0);
+    if (selectedIndex != 0) {
+      colors.splice(selectedIndex - 1, 1);
     }
-    endShape();
-  });
-  /* -- TRANSLATE OPTIONS TO RIGHT POSITION */
-  /* for (var i = 0; i < 3; i++) {
-    stroke(colors[i]);
-    beginShape();
-    for (var w = -20; w < width + 20; w += 5) {
-      var h = height / 2;
-      h += waveWidth * sin(w * 0.03 + frameCount * 0.07 + i * TWO_PI / 3) * pow(abs(sin(w * 0.001 + frameCount * 0.02)), 5);
-      curveVertex(w, h);
-    }
-    endShape();
-  } */
-
-
-}
-
-
-/* function mousePressed() {
-  colors.pop();
-
-   if (type == 0) {
-    type = 1;
-  } else {
-    type = 0;
   }
-}*/
+
+
+
+  function draw() {
+    blendMode(BLEND);
+
+    if (type == 0) {
+      background(255);
+      blendMode(EXCLUSION);
+    } else {
+      background(0);
+      blendMode(SCREEN);
+    }
+    noFill();
+    strokeWeight(46);
+    colors.forEach(element => {
+      stroke(element);
+      i = colors.indexOf(element);
+      beginShape();
+      for (var w = -20; w < width + 20; w += 5) {
+        var h = height / 2;
+        var factor = frameCount;
+        h += waveWidth * sin(w * 0.03 + factor * 0.07 + i * TWO_PI / 3) * pow(abs(sin(w * 0.001 + factor * 0.015)), 1);
+        curveVertex(w, h);
+      }
+      endShape();
+    });
+  }
+
+  function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+    configureRelativeMenuPositions();
+    hideAllContent();
+    mainMenuSelect(options[0]);
+  }
+
+
+  /* function mousePressed() {
+    colors.pop();
+  
+     if (type == 0) {
+      type = 1;
+    } else {
+      type = 0;
+    }
+    }*/
