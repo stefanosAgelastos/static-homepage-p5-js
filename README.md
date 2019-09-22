@@ -15,7 +15,7 @@
   
 ## Description
 
-This is my first portfolio homepage I coded on a train from Stockholm to Copenhagen. It has three different sections, providing information about my projects, selfies of myself to show something more personal, and also my work experience so far.
+This is my first portfolio homepage. I coded this project on a train from Stockholm to Copenhagen. It has three different sections, providing information about my projects, selfies of myself to show something more personal, and also my work experience so far.
 
 </InfoPaper>
 
