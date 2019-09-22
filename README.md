@@ -15,7 +15,7 @@
   
 ## Description
 
-This my first portfolio homepage I coded on a train from Stockholm to Copenhagen. It has three different sections, providing information about my projects, selfies of myself to show something more personal, and also my work experience so far. The pitfall is that there is a lot of media, so it loads slowly. Maybe the most important problem I cannot individual links that point to specific projects or subpages. The app is statically served from github pages, and in order for me to implement individual subpages I would have to do a huge hack. That's the reason why I coded my [current portfolio webpage](https://www.stefworks.ml) with Next.js, which provides server-side rendering and static exporting.
+This is my first portfolio homepage I coded on a train from Stockholm to Copenhagen. It has three different sections, providing information about my projects, selfies of myself to show something more personal, and also my work experience so far. The pitfall is that there is a lot of media, so it loads slowly. Maybe the most important problem is that I cannot share individual links that point to specific projects or subpages. The app is statically served from github pages, and in order for me to implement individual subpages I would have to do a huge hack. That's the reason why I coded my [current portfolio webpage](https://www.stefworks.ml) with Next.js, which provides server-side rendering and static exporting.
 
 </InfoPaper>
 
