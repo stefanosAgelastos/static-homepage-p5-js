@@ -15,7 +15,7 @@
   
 ## Description
 
-This is my first portfolio homepage. I coded this project on a train from Stockholm to Copenhagen. It has three different sections, providing information about my projects, selfies of myself to show something more personal, and also my work experience so far.
+This is my first portfolio homepage. I coded this project on a train ride from Stockholm to Copenhagen in **July 2018**. It has three different sections. One providing information about my projects, a more personal one with selfies of myself and a third section with my work experience so far.
 
 </InfoPaper>
 
@@ -44,9 +44,9 @@ This is my first portfolio homepage. I coded this project on a train from Stockh
 ### The pitfalls
 
 - There is a lot of media, so it loads slowly
-- Maybe the most important problem is that I cannot share individual links that point to specific projects or subpages. Deep-linking
+- Maybe the most important problem is that I cannot share individual links to specific projects or subpages. AKA Deep-linking
 
-The app is statically served from github pages, and in order for me to implement individual subpages I would have to do a huge hack. That's the reason why I coded my [current portfolio webpage](https://www.stefworks.ml) with Next.js, which provides server-side rendering and static exporting.
+The app is statically served by github pages, and in order for me to implement individual subpages I would have to do a huge hack. That's why I coded my [current portfolio webpage](https://www.stefworks.ml) with Next.js, which provides server-side rendering and static exporting, out of the box.
 
 </Panel>
 
@@ -54,7 +54,7 @@ The app is statically served from github pages, and in order for me to implement
 
 ### Implement as a React component
 
-The most valuable feature of this project is the custom made nav bar. In my future plans, I would like to implement it as a React component, that can be used as a black box by other projects.
+The most valuable feature of this project is the custom made navigation bar. If I find time in the future, I would like to implement it as a React component, that can be imported as a black box by other projects.
 </Panel>
 
 </PanelGrid>
